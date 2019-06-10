@@ -1,1 +1,1 @@
-## Open [UnitType](https://unityype.github.io)
+## Open [UnitType](https://unittype.github.io)
