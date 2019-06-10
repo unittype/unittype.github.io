@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/** Flex col & row  **/
+
+.flex_row {
+	display: flex;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	align-items: center;
+	-o-align-items: center;
+	-ms-align-items: center;
+	-webkit-align-items: center;
+	-ms-justify-content: center;
+	-webkit-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+}
+.flex_col {
+	display: flex;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	align-items: center;
+	-o-align-items: center;
+	-ms-align-items: center;
+	-webkit-align-items: center;
+	-ms-justify-content: center;
+	-webkit-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+}
+/***  Fonts   ***/
+.baloo_bold {
+	font-family: 'Baloo', cursive;
+	font-variant: normal;
+	font-weight: 900;
+}
+.baloo_nor {
+	font-family: 'Baloo', cursive;
+	font-variant: normal;
+	font-weight: 500;
+}
+.baloo_ligh {
+	font-family: 'Baloo', cursive;
+	font-variant: normal;
+	font-weight: 100;
+}
+
+.top_hr {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	border: none;
+	height: 3px;
+	background-color: #000000;
+}
+
+#icon {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#text {
+	margin-top: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@media only screen and (max-width: 700px) {
+	#url {
+		display: none;
+	}
+}
