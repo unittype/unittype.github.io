@@ -6,6 +6,24 @@
 	<meta name="theme-color" content="#fff" />
 	<link rel="shortcut icon" href="img/icon.png" type="image/x-png" sizes="16x16 24x24 32x32 64x64"/>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		let data;
+		function _(e) {
+			return document.getElementById(e);
+		}
+		(function () {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", 'data.json', true);
+			ajax.responseType = 'json';
+			ajax.send();
+			ajax.onreadystatechange = function () {
+				if(this.readyState == 4 && this.status == 200 ) {
+					data = JSON.parse(JSON.stringify(this.response));
+					_('info').innerHTML = data['shon']['info'];
+				}
+			}
+		})();
+	</script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet"> 
 </head>
@@ -17,6 +35,7 @@
 		<div id="text"><img src="img/text.svg" onerror="this.src='text.png'" width="350"></div>		
 	</div>
 	<div id="url" class="baloo_nor" style="font-size: 1.5em; bottom: 0; position: absolute; display: none;">unittype.com</div>
+	<div id="info"></div>
 </div>
 </body>
 </html>
